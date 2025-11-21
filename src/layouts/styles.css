@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px; /* base font size */
+  print-color-adjust: exact;
+}
+
+body {
+  padding: 48px;
+  color: #444;
+  font-family: "Inter", "Noto Sans SC", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: auto;
+  font-style: normal;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", "Noto Sans SC", sans-serif;
+  color: #222;
+  margin-top: 0.5em;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  border-bottom: 3px solid #ddd;
+  position: relative;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 96px;
+  height: 5px;
+  background-color: #016ef1;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #01397e;
+  margin-top: 0.5em;
+}
+
+h4, h5, h6 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 0.4em;
+}
+
+/* Text formatting */
+b, strong {
+  font-weight: 600;
+}
+
+h1 b, h1 strong { font-weight: 900; }
+h2 b, h2 strong,
+h3 b, h3 strong,
+h4 b, h4 strong,
+h5 b, h5 strong,
+h6 b, h6 strong,
+a b, a strong { font-weight: 800; }
+
+i, em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+a {
+  color: #222;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  margin-top: 0.5em;
+  padding-left: 12px;
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  margin-top: 0.2em;
+}
+
+ul li:before {
+  content: "•";
+  position: absolute;
+  left: -12px;
+  color: #016ef1;
+  font-weight: 600;
+  font-family: "Inter";
+}
+
+/* Paragraphs */
+p {
+  margin-top: 0.5em;
+}
+
+p.pull-right {
+  float: right;
+  margin-right: 4px;
+  margin-top: -1.5em;
+  text-align: right;
+}
+
+/* Code & Pre */
+code {
+  background-color: rgba(1, 110, 241, 0.2);
+  border-radius: 2px;
+  padding: 0 4px;
+  font-weight: 500;
+  color: #222;
+  font-family: inherit;
+}
+
+pre {
+  font-family: inherit;
+}
+
+pre code {
+  display: block;
+}
+
+/* Tables */
+table {
+  margin-top: 0.5em;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table th, table tr {
+  font-weight: normal;
+}
+
+table.no-margin {
+  margin: 0 !important;
+}
+
+/* Images */
+img {
+  border-radius: 4px;
+  float: left;
+  height: 10rem;
+  margin-right: 2rem;
+}
+
+/* Page break */
+.page-break {
+  margin: 2em 0;
+  border-top: 1px dashed #aaa;
+  border-bottom: 1px dashed #aaa;
+  text-align: center;
+}
+
+.page-break:before {
+  content: "Page Break";
+  color: #aaa;
+  display: block;
+}
+
+/* Misc */
+hr {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 1em 0;
+}
+
+::selection, ::-moz-selection {
+  background-color: rgba(1, 110, 241, 0.2);
+}
+
+/* Tags */
+.tags {
+  margin: 0.5em 0;
+}
+
+.tags ul {
+  display: inline;
+  padding: 0;
+}
+
+.tags li {
+  display: inline-block;
+  background-color: rgba(1, 110, 241, 0.15);
+  border-radius: 4px;
+  color: #222;
+  font-weight: 500;
+  padding: 1px 4px;
+  margin-right: 1px;
+}
+
+.tags li::before {
+  display: none;
+}
+
+/* Row/column layout */
+.row.row--section {
+  display: flex;
+}
+
+.row.row--section .column.column--1-1 { flex: 100%; }
+.row.row--section .column.column--1-2 { flex: 66%; padding-right: 3rem; }
+.row.row--section .column.column--2-2 { flex: 34%; padding-left: 3rem; }
+
+/* Small helper */
+.h3-like { color: #01397e; }

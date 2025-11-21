@@ -1,0 +1,16 @@
+---
+export interface Props {
+  institution: string;
+  period: string;
+  degree: string;
+  place: string;
+}
+
+const { institution, period, degree, place } = Astro.props;
+---
+
+<h3>{institution}</h3>
+<p class="pull-right"><em>{period}</em></p>
+<p>
+  <strong>{degree}</strong>, <em>{place}</em>
+</p>

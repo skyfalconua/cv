@@ -1,0 +1,11 @@
+---
+export interface Props {
+  title: string;
+  period: string;
+}
+
+const { title, period } = Astro.props;
+---
+
+<p class="h3-like"><strong>{title}</strong></p>
+<p class="pull-right"><em>{period}</em></p>
