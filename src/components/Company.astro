@@ -1,0 +1,11 @@
+---
+export interface Props {
+  name: string;
+  place: string;
+}
+
+const { name, place } = Astro.props;
+---
+
+<h3>{name}</h3>
+<p class="pull-right"><em>{place}</em></p>

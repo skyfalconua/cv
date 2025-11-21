@@ -1,0 +1,29 @@
+---
+import simpleMarkdown from '../utils/markdown'
+
+const dedent = (str: string) => {
+  const lines = str.split('\n');
+  if (!lines[0]) lines.shift();
+
+  let [first, ...rest] = lines;
+
+  const indentLevels = rest
+    .filter(line => !!line.trim())
+    .map(line => line.match(/^\s*/)![0].length);
+  const minIndent = Math.min(...indentLevels);
+
+  return [
+    first,
+    ...rest.map(line => line.slice(minIndent))
+  ].join('\n');
+}
+
+let content = await Astro.slots.render('default');
+if (content) {
+  content = simpleMarkdown(dedent(content));
+}
+---
+
+<>
+{content ? <Fragment set:html={content} /> : <slot />}
+</>
