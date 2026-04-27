@@ -6,26 +6,32 @@ import Position from "../components/Position.astro";
 import Education from "../components/Education.astro";
 ---
 
+<script is:inline>
+  const mode = new URLSearchParams(window.location.search).get("mode") || "web";
+  document.documentElement.classList.add(`mode-${mode}`);
+</script>
+
 <Layout title="CV">
   <div class="row row--section">
     <div class="column column--1-1">
       <h1><strong>Andrew Sokolov</strong></h1>
-      <p>Senior Full-stack Software Engineer</p>
+      <p>Senior Full-Stack Software Engineer</p>
 
       <p>
         <a href="https://www.linkedin.com/in/skyfalconua">https://www.linkedin.com/in/skyfalconua</a>
         &nbsp; | &nbsp;
         <a href="https://github.com/skyfalconua">https://github.com/skyfalconua</a>
 
-        <!-- WEB version -->
+        <span class="no-print">
         &nbsp; | &nbsp;
         <a href="https://github.com/skyfalconua/cv/blob/main/output/CV-Andrew-Sokolov.pdf">PDF version</a>
+        </span>
       </p>
 
       <h2>Summary</h2>
         <p>Software Developer with 15 years of experience designing, building, and delivering
         scalable web applications across Software Development, Advertising, Automotive,
-        Mobile Entertainment and Fintech domains.</p>
+        Mobile Entertainment, Fintech, AgenticAI and GenAI domains.</p>
         <p>Skilled in Python, Django, Kotlin, JavaScript, Angular and React with strong expertise
         in unit and end-to-end test automation, Docker-based DevOps workflows, server administration,
         and applying architectural best practices within large distributed teams.</p>
@@ -50,15 +56,22 @@ import Education from "../components/Education.astro";
             - React
             - HTML/CSS
             - Node.js
+            - React.js
+            - Microsoft Agentic Framework
+            - AWS Strands
+            - NodeJs / Angular
           </Markdown>
         </div>
 
         <h4>Projects:</h4>
 
         <Markdown>
-           Was involved in a NodeJS/React project, contributing to both FE and BE development.
-           Worked on refactoring and maintaining a Python/React/Kotlin FinTech platform,
+           - Worked on refactoring and maintaining a Python/React/Kotlin FinTech platform,
            improving stability and code quality.
+
+           - Was involved in a NodeJS/React project, contributing to both FE and BE development.
+
+           - PoC of custom AI agent for Jira automatiom and AI-assisted code migration
         </Markdown>
 
       <!----------------------------------------------------------------------->
@@ -139,18 +152,14 @@ import Education from "../components/Education.astro";
 
       <!----------------------------------------------------------------------->
 
-      <!-- PDF version; Scale: 67%; No margin -->
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div class="only-pdf">
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
 
-      <!-- WEB version -->
-      <!-- <hr/> -->
+      <hr class="only-web" />
 
       <!----------------------------------------------------------------------->
 

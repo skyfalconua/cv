@@ -192,6 +192,15 @@ hr {
   background-color: rgba(1, 110, 241, 0.2);
 }
 
+@media print {
+  .no-print { display: none; }
+}
+
+/* Mode switching via ?mode=pdf or ?mode=web */
+.only-pdf, .only-web { display: none; }
+.mode-pdf .only-pdf { display: block; }
+.mode-web .only-web { display: block; }
+
 /* Tags */
 .tags {
   margin: 0.5em 0;

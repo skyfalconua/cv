@@ -7,9 +7,12 @@ Git-friendly version of my CV built with [Astro](https://astro.build).
 ```bash
 npm i
 npm run dev
+# Open `http://localhost:4321` and save as PDF (Ctrl+P / Cmd+P)
+
+npm run build
+# Result in dist/index.html
 ```
 
-Open `http://localhost:4321` and save as PDF (Ctrl+P / Cmd+P)
 
 ## 📜 License
 
